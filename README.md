@@ -1,6 +1,8 @@
 
 # FootageGuru
 
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com)
 [![Known Vulnerabilities](https://snyk.io/test/github/RushilKoul/footageguru/badge.svg)](https://snyk.io/test/github/RushilKoul/footageguru})
 
 A simple application built on vue electron that edits boring stuff for you.
