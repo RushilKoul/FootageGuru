@@ -3,7 +3,7 @@
 
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-vue.svg)](https://forthebadge.com)
-[![Known Vulnerabilities](https://snyk.io/test/github/RushilKoul/footageguru/badge.svg)](https://snyk.io/test/github/RushilKoul/footageguru})
+[![Known Vulnerabilities](https://snyk.io/test/github/RushilKoul/FootageGuru/badge.svg)](https://snyk.io/test/github/RushilKoul/FootageGuru})
 
 A simple application built on vue electron that edits boring stuff for you.
 Based on [auto-editor](https://github.com/WyattBlue/auto-editor)
