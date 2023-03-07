@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/RushilKoul/rushilkoul.github.io/main/footageGuruFull.png">
+
 
 # FootageGuru
 
