@@ -1,6 +1,8 @@
 
 # FootageGuru
 
+[![Known Vulnerabilities](https://snyk.io/test/github/RushilKoul/footageguru/badge.svg)](https://snyk.io/test/github/RushilKoul/footageguru})
+
 A simple application built on vue electron that edits boring stuff for you.
 Based on [auto-editor](https://github.com/WyattBlue/auto-editor)
 ## Features
