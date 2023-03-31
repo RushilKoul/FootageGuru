@@ -198,7 +198,7 @@ body {
         opacity: 1;
     }
 
-    50% {
+    75% {
         opacity: 1;
     }
 
@@ -211,6 +211,10 @@ body {
 .fade-out {
     animation: fade-out 2s ease-out both;
     pointer-events: none;
+}
+
+.slow-fade-out {
+    animation: fade-out 15s ease-out both;
 }
 
 .app_container {
@@ -563,12 +567,14 @@ table {
     padding:5px;
     margin-top: 10px;
 }
+
 table th {
     text-align: left;
     padding: 5px 20px;
     background: #22082691;
     color: rgb(239, 189, 255);
 }
+
 table td {
     text-align:left ;
     padding:5px 20px;
@@ -581,6 +587,29 @@ table td {
 td:nth-child(even) {
     color:rgba(255, 255, 255, 0.72);
 }
+
 td:nth-child(odd) {
     font-weight: 700;
+}
+
+.notification_box {
+    position: fixed;
+    bottom: 0; 
+    right: 0;
+    padding: 20px;
+
+    background-color: #191825;
+    border: 1px solid #414055;
+}
+
+.notification_button {
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(213, 149, 255);
+    text-decoration: underline;
+    padding: 0px;
+}
+
+.notification_button:hover {
+    background-color: rgb(0,0,0,0);
+    color: rgb(163, 107, 201)
 }

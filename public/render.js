@@ -8,6 +8,7 @@ const buff = Buffer.alloc(100);
 const header = Buffer.from("mvhd");
 
 const win = remote.getCurrentWindow(); 
+const { session } = require('electron');
 var ffprobe = require('ffprobe'),
 ffprobeStatic = require('ffprobe-static');
 
@@ -15,6 +16,7 @@ let videopath = ""
 
 const fileTypes = ['mp4', 'mkv', 'm4a']
 
+let sessionIndex = 0
 
 // ---------------------------- WINDOW CONTROLS -----------------------------------
 
@@ -184,13 +186,36 @@ document.querySelector("#export_silence").addEventListener('click', () => {
         let margin = document.querySelector("#margin").value
     
     
-        let fgPath = `./editorscripts/fg-editor.exe `
+        let fgPath = `auto-editor`
         let parameters = [videopath, `--margin`, `${margin}sec`]
         child(fgPath, parameters, function(err, data) {
             console.log(err)
             console.log(data.toString());
-            // turn off loading screen
+            // turn off loading screen, show dialog
             document.getElementById("inP").style.display = "none";
+
+            let notif = document.createElement("div");
+            notif.innerHTML = 
+            `
+            <div class="notification_box slow-fade-out">
+                <span class="notification header">Processing Finished</span>
+                <p>Video exported successfully at: <br>
+                    <button class="notification_button" id="notificationButton_${sessionIndex}">${videopath.replace(".mp4", "") + '_ALTERED.mp4'}</button>
+                </p>
+            </div>
+          `
+
+          document.body.appendChild(notif);
+          document.getElementById(`notificationButton_${sessionIndex}`).addEventListener('click', () => {
+             
+            child('explorer.exe', [`/select,${videopath.replace(".mp4", "") + '_ALTERED.mp4'}`], function(err, data) {
+                console.log(err)
+            });
+            
+          });
+          sessionIndex += 1;
+
+            
        });
     }
 })

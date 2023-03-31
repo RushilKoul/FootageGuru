@@ -7,8 +7,8 @@
       <hr width="170px" />
       <button class="feature_select" @click="$event => index = 0">Silence Remover</button>
       <button class="feature_select" @click="$event => index = 1">Motionless Remover</button>
-
     </div>
+    
     <div class="app_main">
       <vid-preview></vid-preview>
       <div class="feature_set_container" v-show="index == 0">
